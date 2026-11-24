@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 영화 보드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">MY MOVIE COLLECTION</p>
+      <h1>내 영화 보드</h1>
+      <p class="description">다시 보고 싶은 영화를 검색하고 찜해 보세요.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="control-panel">
+      <div class="toolbar">
+        <label class="sr-only" for="q">영화 제목 검색</label>
+        <input
+          id="q"
+          type="search"
+          placeholder="영화 제목 검색"
+          autocomplete="off"
+        >
+
+        <label for="sort">정렬</label>
+        <select id="sort">
+          <option value="title">제목순</option>
+          <option value="year">개봉연도순</option>
+          <option value="rating">평점순</option>
+        </select>
+      </div>
+
+      <div class="stats">
+        <p id="count">0편</p>
+        <p>찜 <span id="likeCount">0</span>편</p>
+      </div>
+    </section>
+
+    <section class="board" id="board"></section>
+
+    <p class="state-empty">조건에 맞는 영화가 없습니다.</p>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>영화 정보 및 포스터 이미지 출처: TMDB</p>
+    <p>웹개발기초 12주차 수업 실습</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
